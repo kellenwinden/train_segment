@@ -92,7 +92,8 @@ def create_mask(masks, img_size):
 def calculate_mask_center(masks):
     mask_center = [[] for i in range(len(masks))]
     for i in range(len(masks)):
-        mask_center[i] = np.mean(masks[i]['coordinates'],axis=0)
+        center = np.mean(masks[i]['coordinates'],axis=0)
+        mask_center[i] = (int(center[0]), int(center[1]))
     return mask_center
 
 # Press the green button in the gutter to run the script.
