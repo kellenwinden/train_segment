@@ -9,3 +9,4 @@ source /programs/biogrids.shrc
 export PYTHON_X=3.8.8
 source venv/bin/activate
 python main.py
+python reshape.py
