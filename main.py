@@ -98,6 +98,6 @@ def calculate_mask_center(masks):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    train_model('/Users/kellenwinden/Data/calcium_imaging/train_segment/file_prefixes.txt')
+    train_model('file_prefixes.txt')
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
