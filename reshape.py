@@ -20,4 +20,4 @@ def reshape(model_path):
     h5.close()
 
 if __name__ == '__main__':
-    reshape('/Users/kellenwinden/Data/calcium_imaging/train_segment/unet_calcium.hdf5')
+    reshape('unet_calcium.hdf5')
