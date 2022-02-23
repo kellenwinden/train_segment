@@ -93,7 +93,7 @@ def calculate_mask_center(masks):
     mask_center = [[] for i in range(len(masks))]
     for i in range(len(masks)):
         center = np.mean(masks[i]['coordinates'],axis=0)
-        mask_center[i] = [int(center[0]), int(center[1])]
+        mask_center[i] = [int(center[1]), int(center[0])]
     return mask_center
 
 # Press the green button in the gutter to run the script.
