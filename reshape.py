@@ -2,9 +2,9 @@ from shutil import copy
 import h5py
 import json
 
-def reshape(model_path):
-    new_window = (None, 1024, 1024)
-    path = model_path[0:-5] + "_1024.hdf5"
+def reshape(model_path, size):
+    new_window = (None, size, size)
+    path = model_path[0:-5] + f"_{size}.hdf5"
     copy(model_path, path)
     h5 = h5py.File(path, 'a')
     config = json.loads(h5.attrs['model_config'])
@@ -20,4 +20,5 @@ def reshape(model_path):
     h5.close()
 
 if __name__ == '__main__':
-    reshape('unet_calcium.hdf5')
+    reshape('unet_calcium.hdf5', 512)
+    reshape('unet_calcium.hdf5', 1024)
