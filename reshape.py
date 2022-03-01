@@ -22,3 +22,4 @@ def reshape(model_path, size):
 if __name__ == '__main__':
     reshape('unet_calcium.hdf5', 512)
     reshape('unet_calcium.hdf5', 1024)
+    reshape('unet_calcium.hdf5', 2048)
